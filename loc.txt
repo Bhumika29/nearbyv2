@@ -1,0 +1,22 @@
+
+
+//function getWeatherCity(city)
+//{
+	result=undefined;
+	
+	var url="http://ipinfo.io";
+	console.log(url);
+	var req=request(url,function(response) {
+	result=response.city;
+    return response.city;
+	});
+	while(result == undefined){
+		require('deasync').runLoopOnce();
+	}
+		
+	return result;
+//}
+
+
+
+
